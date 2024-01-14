@@ -1,0 +1,61 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+    android:padding="8dp"
+    android:background="@drawable/bg">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <!-- 左边返回按钮 -->
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+
+            android:padding="10dp" />
+
+        <!-- 中间的收藏夹 TextView -->
+        <TextView
+            android:id="@+id/collectText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收藏夹"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:padding="10dp" />
+
+        <!-- 右边搜索按钮 -->
+        <ImageView
+            android:id="@+id/searchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:padding="10dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/collect_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

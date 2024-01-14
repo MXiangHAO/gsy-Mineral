@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+
+    <!-- 返回按钮 -->
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:src="@drawable/arrow_back"
+        android:scaleType="fitCenter"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="16dp"/>
+    <!-- 标题栏 -->
+    <TextView
+        android:id="@+id/followingTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我的关注"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"/>
+
+    <!-- 展示关注用户列表的RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/followingRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/followingTitle"
+        android:padding="16dp"
+        android:scrollbars="vertical"/>
+
+</RelativeLayout>

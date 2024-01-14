@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@android:color/transparent">
+
+    <!-- 头像和用户名的水平布局 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <!-- 用户头像 -->
+        <com.example.chapter_blog.util.CircleImageView
+            android:id="@+id/avatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/touxiang" /> <!-- 替换为默认头像或适当的占位图 -->
+
+        <!-- 用户名 -->
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:text="用户名"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+    <!-- 评论内容 -->
+    <TextView
+        android:id="@+id/comment_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="这里是评论内容" />
+
+    <!-- 评论时间 -->
+    <TextView
+        android:id="@+id/comment_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2023-01-01 12:00:00"
+        />
+</LinearLayout>

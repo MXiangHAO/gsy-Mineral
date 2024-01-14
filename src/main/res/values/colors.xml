@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimaryDark">#303F9F</color>
+    <!-- 选中状态下的字体颜色 -->
+    <color name="selected_text_color">#FF0000</color>
+    <!-- 默认状态下的字体颜色 -->
+    <color name="default_text_color">#000000</color>
+    <!-- 用户消息背景颜色 -->
+    <color name="userMessageBackground">#4285F4</color> <!-- 这里是蓝色 -->
+
+    <!-- 朋友消息背景颜色 -->
+    <color name="friendMessageBackground">#999999</color> <!-- 这里是灰色 -->
+</resources>

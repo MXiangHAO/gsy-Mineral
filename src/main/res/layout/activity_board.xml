@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.BoardActivity"
+    android:background="@drawable/bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/board_view"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#959191"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/recommend"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="推荐"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/hot"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="热榜"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/serach_view"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#959191"
+            android:clickable="true">
+
+            <EditText
+                android:id="@+id/search_context"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="50dp"
+
+                android:background="@drawable/edittext_shape01"
+                android:drawableLeft="?android:attr/actionModeWebSearchDrawable"
+                android:ems="10"
+                android:hint="搜索博客或作者"
+                android:inputType="textPersonName"
+                android:paddingStart="20dp"
+                android:singleLine="true"
+                android:textColorHint="#9921329A" />
+
+            <android.widget.Button
+                android:id="@+id/search_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+
+                android:layout_alignRight="@+id/search_context"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+
+                android:background="@drawable/edittext_shape01"
+                android:gravity="center"
+                android:text="@string/serach"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp" />
+            <!-- 添加中间的线 -->
+            <View
+                android:id="@+id/divider"
+                android:layout_width="2dp"
+                android:layout_height="28dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/search_button"
+                android:background="@color/colorPrimaryDark" />
+        </RelativeLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/blog_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/botton_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:layout_alignParentBottom="true"
+
+                android:layout_gravity="bottom"
+                app:itemBackground="@color/white"
+                app:itemIconTint="@drawable/selector"
+                app:itemTextColor="@drawable/selector"
+                app:menu="@menu/menu_navigation"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

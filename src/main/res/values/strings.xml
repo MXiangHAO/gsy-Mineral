@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Mineral</string>
+    <string name="serach">搜   索</string>
+    <string name="home">主页</string>
+    <string name="library">资源</string>
+    <string name="message">消息</string>
+    <string name="mine">我的</string>
+    <string name="add">增加</string>
+</resources>

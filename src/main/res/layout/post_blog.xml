@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/activity_main.xml -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".Activity.postBlog"
+    tools:ignore="MissingDefaultResource"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="389dp"
+        android:layout_height="45dp">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="39dp"
+            android:layout_height="26dp"
+            android:layout_gravity="start"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/back"/>
+
+        <!-- 添加一个占位的 View，使用 layout_weight 将其推到最右端 -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="end"
+            android:layout_weight="1" />
+        <Button
+            android:id="@+id/btn_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="发送"/>
+
+
+    </LinearLayout>
+    <EditText
+        android:id="@+id/tx_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="博客标题">
+
+    </EditText>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- ScrollView 包含博客内容 -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout
+                android:id="@+id/tx_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <!-- 添加博客内容的提示 -->
+                <!-- This is where dynamically added views (EditText and ImageView) will be placed -->
+
+            </LinearLayout>
+        </ScrollView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="博客内容"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+        <!-- 底部按钮 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_upLoadImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="上传图片" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="end"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btn_upLoadFile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="上传文件" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

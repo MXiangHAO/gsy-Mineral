@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg">
+
+    <!-- 第一行：返回按钮 -->
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="53dp"
+        android:layout_height="35dp"
+        android:src="@drawable/back"
+        android:text="返回" />
+
+    <!-- 第二行：用户头像和用户名 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.example.chapter_blog.util.CircleImageView
+            android:id="@+id/userAvatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/login"
+            android:contentDescription="User Avatar"
+            android:background="@drawable/circular_background" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/userAvatar"
+            android:layout_toRightOf="@id/userAvatar"
+            android:text="用户名"
+            android:textSize="20sp"
+            android:layout_centerVertical="true"/>
+
+        <!-- 关注按钮布局 -->
+
+        <!-- 私信按钮布局 -->
+
+        <ImageView
+            android:id="@+id/followButton"
+            android:layout_width="52dp"
+            android:layout_height="43dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="86dp"
+            android:layout_marginBottom="0dp"
+            android:src="@drawable/follow" />
+
+        <ImageView
+            android:id="@+id/messageButton"
+            android:layout_width="52dp"
+            android:layout_height="43dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginRight="-152dp"
+            android:layout_toStartOf="@id/followButton"
+            android:layout_toLeftOf="@id/followButton"
+            android:contentDescription="Send Message"
+            android:src="@drawable/email" />
+    </RelativeLayout>
+
+    <!-- 第三行：博客标题 -->
+    <TextView
+        android:id="@+id/blogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="博客标题"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="8dp" />
+
+    <!-- 第四行：上下滑动布局 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/BlogLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- 这里可以动态添加内容 -->
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 底部按钮区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btnLike"
+            android:layout_width="12dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:src="@drawable/like" />
+
+        <ImageView
+            android:id="@+id/btnComment"
+            android:layout_width="12dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:src="@drawable/comment"/>
+
+        <ImageView
+            android:id="@+id/btnCollect"
+            android:layout_width="12dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:src="@drawable/star" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".Activity.login"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.chat"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.upLoadFile"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.userInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.blogInfo"
+            android:exported="false" />
+        <activity
+            android:name=".basic"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.personalCenterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.BoardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.login_forget"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.commentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.firstUserInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.register"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.postBlog"
+            android:exported="false" />
+        <activity android:name=".Activity.CollectActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".Activity.NotificationActivity"
+            android:exported="false" />
+        <activity android:name=".Activity.TargetActivity"
+            android:exported="false"/>
+        <activity android:name=".Activity.FileActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".Activity.message"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.start"
+            android:theme="@style/SplashTheme"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

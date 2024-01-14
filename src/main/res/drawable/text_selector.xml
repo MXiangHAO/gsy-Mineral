@@ -1,0 +1,14 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 选中状态 -->
+    <item android:state_selected="true">
+        <underline xmlns:android="http://schemas.android.com/apk/res/android">
+            <color android:color="@color/selected_text_color" />
+        </underline>
+    </item>
+    <!-- 默认状态 -->
+    <item>
+        <underline xmlns:android="http://schemas.android.com/apk/res/android">
+            <color android:color="@android:color/transparent" />
+        </underline>
+    </item>
+</selector>
