@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="?android:attr/selectableItemBackground">  <!-- 添加点击波纹效果 -->
+        <!-- 包裹标题和删除按钮的LinearLayout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- 博客标题 -->
+            <TextView
+                android:id="@+id/blogTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="8dp"/>
+
+            <!-- 删除按钮 -->
+            <ImageButton
+                android:id="@+id/deleteButton"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:src="@drawable/delete"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
+                android:text="删除"/>
+
+        </LinearLayout>
+
+
+        <!-- 博客日期 -->
+        <TextView
+            android:id="@+id/blogDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:padding="8dp"/>
+    </LinearLayout>
+</LinearLayout>

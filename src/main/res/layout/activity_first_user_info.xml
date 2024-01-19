@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.BoardActivity"
+    android:background="@drawable/bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- 用户头像 -->
+            <com.example.chapter_blog.util.CircleImageView
+                android:id="@+id/userImageView"
+                android:layout_width="72dp"
+                android:layout_height="81dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/touxiang" />
+
+            <!-- 用户名文本框 -->
+            <TextView
+                android:id="@+id/usernameEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:hint="用户名"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:gravity="center_vertical" />
+
+            <!-- 编辑资料按钮 -->
+            <ImageButton
+                android:id="@+id/editProfileButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="编辑资料"
+                android:scaleType="fitCenter"
+                android:src="@drawable/edit" />
+
+            <!-- 关注按钮 -->
+            <ImageButton
+                android:id="@+id/followButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/follow"
+                android:text="关注"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent" />
+
+            <!-- 收藏按钮 -->
+            <ImageButton
+                android:id="@+id/favoriteButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/iscollect"
+                android:text="收藏" />
+
+        </LinearLayout>
+
+
+
+
+        <!-- 不可编辑的展示资料文本框 -->
+        <TextView
+            android:id="@+id/displayInfoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="展示的资料"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/editProfileButton"
+            app:layout_constraintTop_toTopOf="@+id/editProfileButton"
+            app:layout_constraintBottom_toBottomOf="@+id/editProfileButton"
+            android:layout_marginStart="8dp" />
+
+        <!-- 博客内容的滚动框 -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/blogRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/blog_post_item" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="0dp"
+                app:itemBackground="@color/white"
+                app:itemIconTint="@drawable/selector"
+                app:itemTextColor="@drawable/selector"
+                app:menu="@menu/menu_navigation"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+</RelativeLayout>

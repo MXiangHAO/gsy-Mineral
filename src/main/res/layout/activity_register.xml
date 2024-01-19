@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/img">
+
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="44dp"
+        android:layout_height="27dp"
+        android:layout_gravity="start|top"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Back"
+        android:src="@drawable/back" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="666dp"
+        android:layout_marginBottom="100dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_marginTop="-20dp"> <!-- 设置负的上边距 -->
+
+        <!-- EditText -->
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/user"
+            android:gravity="center"
+            android:hint="手机号/邮箱号"
+            android:minHeight="48dp"
+            android:textColor="@android:color/black" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/my_editpwd"
+            android:gravity="center"
+            android:hint="输入密码"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:textColor="@android:color/black" />
+
+        <!-- 验证码输入框和获取验证码按钮 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <!-- 验证码输入框 -->
+
+            <!-- 获取验证码按钮 -->
+            <EditText
+                android:id="@+id/verificationCode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/verification_code"
+                android:gravity="center"
+                android:hint="验证码"
+                android:minHeight="48dp"
+                android:textColor="@android:color/black" />
+
+            <Button
+                android:id="@+id/getVerificationCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/rounded_button"
+                android:text="获取验证码"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <!-- 注册按钮 -->
+        <Button
+            android:id="@+id/register"
+            android:layout_width="157dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_button"
+            android:text="注册"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+
+
+
+</LinearLayout>
+
