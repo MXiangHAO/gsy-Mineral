@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.blog.mapper.BlogMapper">
+
+
+    <insert id="addBlog" parameterType="com.example.blog.pojo.Blog">
+        INSERT INTO blog (bId, uId, title, content, date)
+        VALUES (#{bId}, #{uId}, #{title}, #{content}, #{date})
+    </insert>
+
+    <!-- 获取所有博客的 SQL 语句 -->
+    <select id="getAllBlogs" resultType="com.example.blog.pojo.Blog">
+        SELECT * FROM blog
+    </select>
+
+    <!-- 根据博客 ID 获取博客的 SQL 语句 -->
+    <select id="getBlogById" resultType="com.example.blog.pojo.Blog">
+        SELECT * FROM blog WHERE bId = #{bId}
+    </select>
+
+    <select id="getBlogIdByUD" resultType="int">
+        SELECT bId FROM blog
+        WHERE uId = #{uId} AND date = #{date}
+    </select>
+    <!-- 根据博客 ID 删除博客的 SQL 语句 -->
+    <delete id="deleteBlog">
+        DELETE FROM blog WHERE bId = #{bId}
+    </delete>
+
+</mapper>

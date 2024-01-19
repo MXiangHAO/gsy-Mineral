@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.blog.mapper.FileMapper">
+
+    <!-- 插入一条文件记录 -->
+    <insert id="addFile" parameterType="com.example.blog.pojo.File">
+        INSERT INTO file (uId, url, bId)
+        VALUES (#{uId}, #{url}, #{bId})
+    </insert>
+
+    <!-- 删除一条文件记录 by fId -->
+    <delete id="deleteFileById" parameterType="int">
+        DELETE FROM file WHERE fId = #{fId}
+    </delete>
+
+    <!-- 更新文件记录 -->
+    <update id="updateFile" parameterType="com.example.blog.pojo.File">
+        UPDATE file
+        SET uId = #{uId}, url = #{url}, bId = #{bId}
+        WHERE fId = #{fId}
+    </update>
+
+    <!-- 根据 bId 和 uId 查询文件记录 -->
+    <select id="getFileByBUId" resultType="com.example.blog.pojo.File" parameterType="com.example.blog.pojo.File">
+        SELECT * FROM file WHERE bId = #{bId} AND uId = #{uId}
+    </select>
+
+    <!-- 根据 bId 查询文件记录列表 -->
+    <select id="getFilesByBId" resultType="com.example.blog.pojo.File" parameterType="int">
+        SELECT * FROM file WHERE bId = #{bId}
+    </select>
+
+    <!-- 根据 uId 查询文件记录列表 -->
+    <select id="getFilesByUId" resultType="com.example.blog.pojo.File" parameterType="int">
+        SELECT * FROM file WHERE uId = #{uId}
+    </select>
+
+</mapper>

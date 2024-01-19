@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.blog.mapper.LikeMapper">
+
+    <!-- 插入一条记录 -->
+    <insert id="insertLike" parameterType="com.example.blog.pojo.Like">
+        INSERT INTO likes (bId, lId, uId)
+        VALUES (#{bId}, #{lId}, #{uId})
+    </insert>
+
+    <!-- 根据likeId删除一条记录 -->
+    <delete id="deleteLikeById" parameterType="int">
+        DELETE FROM likes WHERE lId = #{lId}
+    </delete>
+
+    <!-- 更新记录 -->
+    <update id="updateLike" parameterType="com.example.blog.pojo.Like">
+        UPDATE likes
+        SET bId = #{bId}
+        WHERE lId = #{lId}
+    </update>
+
+    <!-- 根据uId和bId查询记录 -->
+    <select id="getLikesByUidAndBid" parameterType="com.example.blog.pojo.Like" resultType="com.example.blog.pojo.Like">
+        SELECT bId, lId, uId
+        FROM likes
+        WHERE uId = #{userId} AND bId = #{blogId}
+    </select>
+
+    <select id="getLikeByUidAndBid" resultType="com.example.blog.pojo.Like">
+        SELECT bId, lId, uId
+        FROM test_1.likes
+        WHERE uId = #{userId} AND bId = #{blogId}
+    </select>
+
+    <!-- 根据uId和bId删除记录 -->
+    <delete id="deleteLikeByUidAndBid" parameterType="com.example.blog.pojo.Like">
+        DELETE FROM likes WHERE uId = #{userId} AND bId = #{blogId}
+    </delete>
+
+</mapper>

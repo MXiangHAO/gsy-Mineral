@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.blog.mapper.UserMapper">
+
+    <!-- 根据 email 查询用户 -->
+    <select id="getUserByEmail" resultType="com.example.blog.pojo.User">
+        SELECT * FROM user WHERE email = #{email}
+    </select>
+
+    <!-- 根据 phone 查询用户 -->
+    <select id="getUserByPhone" resultType="com.example.blog.pojo.User">
+        SELECT * FROM user WHERE phone = #{phone}
+    </select>
+    <select id="getUserById" resultType="com.example.blog.pojo.User">
+        select * from  user where id=#{id}
+    </select>
+    <!-- addUser -->
+    <insert id="addUser" parameterType="com.example.blog.pojo.User">
+        INSERT INTO user (username, phone, email, password)
+        VALUES (#{username}, #{phone}, #{email}, #{password})
+    </insert>
+    <update id="updateUser" parameterType="com.example.blog.pojo.User">
+        UPDATE user
+        SET username = #{username},
+        phone = #{phone},
+        email = #{email},
+        password = #{password}
+        WHERE id = #{id}
+    </update>
+
+</mapper>

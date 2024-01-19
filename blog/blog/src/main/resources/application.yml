@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:mysql://rm-bp1t432645y3fe6w1so.mysql.rds.aliyuncs.com:3306/test_1
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: qx
+    password: qx815912@
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml #mapper映射文件路径
+  type-aliases-package: com.example.blog.pojo
+
+
+
+logging:
+  level:
+    com.example.blog.mapper: debug
